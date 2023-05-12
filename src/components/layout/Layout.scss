@@ -1,0 +1,14 @@
+.base-layout {
+    height: 100vh;
+    // background-color: #0e2038;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    
+    .container {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
