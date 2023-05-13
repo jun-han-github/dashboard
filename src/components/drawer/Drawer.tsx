@@ -2,26 +2,32 @@ import './Drawer.scss';
 
 type DrawerProp = {
     isOpen: boolean;
+    openDrawer: () => void;
 }
 
-const Drawer = ({ isOpen }: DrawerProp) => {
-
-    console.log('click: ', isOpen);
+const Drawer = ({ isOpen, openDrawer }: DrawerProp) => {
 
     const active = {
-        display: isOpen ? 'none': 'block'
+        display: isOpen ? 'block' : 'none'
     }
 
+    const handleBackdrop = () => {
+        openDrawer();
+    }
+    
     return (
-        <div className="drawer" style={active}>
-            <ul>
-                <li>Page 1</li>
-                <li>Page 2</li>
-                <li>Page 3</li>
-                <li>Page 4</li>
-                <li>Page 5</li>
-            </ul>
-        </div>
+        <>
+            <div className={`backdrop`} style={active} onClick={handleBackdrop}>
+            </div>
+            <div className={`drawer ${isOpen ? 'open': ''}`}>
+                <ul>
+                    <li>Frontend</li>
+                    <li>Backend</li>
+                    <li>DevOps</li>
+                    <li>Cloud</li>
+                </ul>
+            </div>
+        </>
     )
 }
 

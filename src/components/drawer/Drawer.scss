@@ -1,12 +1,32 @@
-.drawer {
+.backdrop {
     position: absolute;
-    z-index: 50;
+    z-index: 49;
 
     left: 0;
     top: 0;
     height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.drawer {
+    position: absolute;
+    z-index: 50;
+
+    left: -250px;
+    top: 0;
+    height: 100vh;
     width: 250px;
     background-color: #ffffff;
-    overflow: scroll;
-    box-shadow: 1px 0 5px grey;  
+
+    transition: transform 0.1s ease-in-out;
+
+    ul {
+        list-style: none;
+    }
+}
+
+.open {
+    box-shadow: 0.5px 0 4px grey;
+    transform: translateX(250px);
 }

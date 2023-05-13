@@ -16,7 +16,7 @@ const Layout = () => {
         <div className="base-layout">
             <Header handleDrawer={openDrawer} />
             <div className="container">
-                <Drawer isOpen={isDrawerOpen}/>
+                <Drawer isOpen={isDrawerOpen} openDrawer={openDrawer}/>
                 <Outlet />
             </div>
         </div>
