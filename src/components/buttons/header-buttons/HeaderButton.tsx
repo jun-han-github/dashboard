@@ -13,7 +13,6 @@ const HeaderButton = ({ text, children }: ButtonProps) => {
   }
 
   return (
-    // Type 'void' is not assignable to type 'MouseEventHandler<HTMLButtonElement> | undefined'.
     <button
       className="header-button"
       onClick={() => handleClick('some')}

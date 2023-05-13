@@ -1,4 +1,7 @@
 .box {
+    position: absolute;
+    z-index: 40;
+
     padding: 2rem;
     background-color: #0e2038;
     display: flex;
