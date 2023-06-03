@@ -5,7 +5,7 @@ import { FaFileDownload, FaFilePdf } from 'react-icons/fa';
 
 const Box = () => {
 
-	const resumePathUrl = "https://junhan.io/public/assets/data/LiuJunHan_CV_LS.pdf";
+	const resumePathUrl = "./assets/data/LiuJunHan_CV_LS.pdf";
 
 	return (
 		<div className="box">
