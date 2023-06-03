@@ -1,7 +1,4 @@
 .box {
-    position: absolute;
-    z-index: 40;
-
     padding: 2rem;
     background-color: #0e2038;
     display: flex;
@@ -17,24 +14,58 @@
     }
 
     @keyframes logo-spin {
-        0% {
-          transform: rotateZ(-45deg);
-        }
-        50% {
-          transform: rotateZ(45deg);
-        }
-        75% {
-          transform: rotateZ(45deg);
-        }
-        100% {
-          transform: rotateZ(-45deg);
-        }
-      }
-      
-      /* Animation shorthand: name duration timing-fn delay iter-count direction */
-      @media (prefers-reduced-motion: no-preference) {
-        .logo {
-          animation: logo-spin infinite 3s linear;
-        }
-    }
+		0% {
+			transform: rotateZ(-45deg);
+		}
+		50% {
+			transform: rotateZ(45deg);
+		}
+		75% {
+			transform: rotateZ(45deg);
+		}
+		100% {
+			transform: rotateZ(-45deg);
+		}
+	}
+
+	/* Animation shorthand: name duration timing-fn delay iter-count direction */
+	@media (prefers-reduced-motion: no-preference) {
+		.logo {
+			animation: logo-spin infinite 3s linear;
+		}
+	}
+
+	.box-column-layout {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+
+		a {
+			text-decoration: none;
+
+			button.download-card {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				cursor: pointer;
+
+				padding: 20px;
+				border-radius: 12px;
+				border: 2px solid #40e0d0;
+				color: #40e0d0;
+				background-color: #000000;
+
+				.text {
+					margin-top: 16px;
+					font-weight: 700;
+				}
+
+			}
+
+			button.download-resume:hover {
+				background-color: #0e2038;
+			}
+		}
+	}
+
 }

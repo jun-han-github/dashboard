@@ -21,7 +21,9 @@
 
     transition: transform 0.1s ease-in-out;
 
-    ul {
+    ul.drawer-list {
+        padding-top: 1rem;
+        margin-top: 10vh;
         list-style: none;
     }
 }

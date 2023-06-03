@@ -14,13 +14,13 @@ const Drawer = ({ isOpen, openDrawer }: DrawerProp) => {
     const handleBackdrop = () => {
         openDrawer();
     }
-    
+
     return (
         <>
-            <div className={`backdrop`} style={active} onClick={handleBackdrop}>
+            <div className="backdrop" style={active} onClick={handleBackdrop}>
             </div>
             <div className={`drawer ${isOpen ? 'open': ''}`}>
-                <ul>
+                <ul className="drawer-list">
                     <li>Frontend</li>
                     <li>Backend</li>
                     <li>DevOps</li>

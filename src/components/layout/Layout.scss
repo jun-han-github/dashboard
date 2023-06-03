@@ -4,11 +4,11 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    
+
     .container {
-        position: relative;
         z-index: 80;
-        flex: 1 1 auto;
+        height: 100%;
+
         display: flex;
         justify-content: center;
         align-items: center;
