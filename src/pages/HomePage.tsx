@@ -1,4 +1,5 @@
 import Box from "../components/box/Box";
+import ExperienceBox from "../components/experience-box/ExperienceBox";
 import SocialMediaBar from "../components/social-media-bar/SocialMediaBar";
 import './HomePage.scss';
 
@@ -17,7 +18,7 @@ const HomePage = () => {
     const reactNative = skill("React Native", "https://reactnative.dev/");
 
     return (
-        <div>
+        <>
             <div className="home-container">
                 <div className="intro">
                     <h2>Liu Junhan</h2>
@@ -35,7 +36,12 @@ const HomePage = () => {
                 <p>In 2021, I used {vuejs} and {laravel} to create templates for e-Commerce platforms.</p>
                 <p>In 2022, I was exposed to blockchain technologies and had the chance to work with crypto-related APIs while developing a mobile app from scratch using {ionic}, {angular} and Laravel.</p>
             </div>
-        </div>
+
+            <ExperienceBox />
+            <ExperienceBox />
+            <ExperienceBox />
+            <ExperienceBox />
+        </>
     )
 }
 
