@@ -1,4 +1,4 @@
-import { FaBars, FaPhone, FaUser } from 'react-icons/fa';
+import { FaBars, FaUser, FaWhatsapp } from 'react-icons/fa';
 import './Header.scss';
 import HeaderButton from '../buttons/header-buttons/HeaderButton';
 
@@ -8,14 +8,16 @@ type HeaderProp = {
 
 const Header = ({ handleDrawer }: HeaderProp) => {
 
+    const iconSize = 20;
+
     return (
         <>
             <header>
                 <nav>
-                    <button className="menu-button" onClick={handleDrawer}><FaBars /></button>
+                    <button className="menu-button" onClick={handleDrawer}><FaBars size={iconSize} /></button>
                     <h2 className="text">Junhan</h2>
-                    <HeaderButton text="connect"><FaPhone /></HeaderButton>
-                    <HeaderButton text="profile"><FaUser /></HeaderButton>
+                    <HeaderButton text="connect"><FaWhatsapp size={iconSize} color="green" /></HeaderButton>
+                    <HeaderButton text="profile"><FaUser size={iconSize} /></HeaderButton>
                 </nav>
             </header>
         </>
