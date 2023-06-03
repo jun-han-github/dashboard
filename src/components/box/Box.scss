@@ -1,72 +1,51 @@
-.box {
-    padding: 2rem;
-    background-color: #0e2038;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    border-radius: 25px;
-
-    .logo {
-        height: 100px;
-        width: 100px;
-    }
-
-    @keyframes logo-spin {
-		0% {
-			transform: rotateZ(-45deg);
-		}
-		50% {
-			transform: rotateZ(45deg);
-		}
-		75% {
-			transform: rotateZ(45deg);
-		}
-		100% {
-			transform: rotateZ(-45deg);
-		}
+@keyframes logo-spin {
+	0% {
+		transform: rotateZ(-45deg);
 	}
-
-	/* Animation shorthand: name duration timing-fn delay iter-count direction */
-	@media (prefers-reduced-motion: no-preference) {
-		.logo {
-			animation: logo-spin infinite 3s linear;
-		}
+	50% {
+		transform: rotateZ(45deg);
 	}
+	75% {
+		transform: rotateZ(45deg);
+	}
+	100% {
+		transform: rotateZ(-45deg);
+	}
+}
 
-	.box-column-layout {
-		width: 100%;
+/* Animation shorthand: name duration timing-fn delay iter-count direction */
+@media (prefers-reduced-motion: no-preference) {
+	.logo {
+		animation: logo-spin infinite 3s linear;
+	}
+}
+
+a {
+	text-decoration: none;
+
+	button.download-card {
 		display: flex;
-		justify-content: space-around;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		width: 100px;
+		height: 100px;
+		margin-left: auto;
 
-		a {
-			text-decoration: none;
+		border-radius: 12px;
+		border: 2px solid #40e0d0;
+		color: #40e0d0;
+		background-color: #000000;
 
-			button.download-card {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				cursor: pointer;
-
-				padding: 20px;
-				border-radius: 12px;
-				border: 2px solid #40e0d0;
-				color: #40e0d0;
-				background-color: #000000;
-
-				.text {
-					margin-top: 16px;
-					font-size: 0.75rem;
-					font-weight: 700;
-				}
-
-			}
-
-			button.download-resume:hover {
-				background-color: #0e2038;
-			}
+		.text {
+			margin-top: 16px;
+			font-size: 0.75rem;
+			font-weight: 700;
 		}
 	}
 
+	button.download-resume:hover {
+		background-color: #0e2038;
+	}
 }

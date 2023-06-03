@@ -14,11 +14,11 @@ const Layout = () => {
   return (
     <>
         <div className="base-layout">
-            <Header handleDrawer={openDrawer} />
             <div className="container">
                 <Drawer isOpen={isDrawerOpen} openDrawer={openDrawer}/>
                 <Outlet />
             </div>
+            <Header handleDrawer={openDrawer} />
         </div>
     </>
   )
