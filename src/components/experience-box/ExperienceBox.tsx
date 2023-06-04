@@ -15,8 +15,8 @@ const ExperienceBox = ({ title, url, description, tags }: JobExperience) => {
       <a href={url}>
         <strong>{title}</strong>
       </a>
-      { description.map((content) => (<p style={{ fontSize: '12px' }}>{content}<br/></p>)) }
-      { tags.map((tag: string) => <Tag tag={tag} />) }
+      { description.map((content, index) => (<p key={index} style={{ fontSize: '12px' }}>{content}<br/></p>)) }
+      { tags.map((tag: string, index: number) => <Tag key={index} tag={tag} />) }
     </div>
   )
 }
