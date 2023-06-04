@@ -16,7 +16,7 @@ const Drawer = ({ isOpen, openDrawer }: DrawerProp) => {
     }
 
     return (
-        <>
+        <div>
             <div className="backdrop" style={active} onClick={handleBackdrop}>
             </div>
             <div className={`drawer ${isOpen ? 'open': ''}`}>
@@ -27,7 +27,7 @@ const Drawer = ({ isOpen, openDrawer }: DrawerProp) => {
                     <li>Cloud</li>
                 </ul>
             </div>
-        </>
+        </div>
     )
 }
 

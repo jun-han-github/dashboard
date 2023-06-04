@@ -1,9 +1,10 @@
 .base-layout {
-    height: 100vh;
+    // height: 100vh;
     background-color: #0e2038;
     // background-color: #ffffff;
     display: flex;
     flex-direction: column;
+    height: auto;
 
     .container {
         z-index: 80;
