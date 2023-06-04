@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { jobExperiences as data } from "../assets/data/job-experiences";
 import Box from "../components/box/Box";
-import HeaderButton from "../components/buttons/header-buttons/HeaderButton";
+// import HeaderButton from "../components/buttons/header-buttons/HeaderButton";
 import ExperienceBox from "../components/experience-box/ExperienceBox";
 import SocialMediaBar from "../components/social-media-bar/SocialMediaBar";
 import './HomePage.scss';

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Header from "../header/Header";
+// import Header from "../header/Header";
 import './Layout.scss';
 import { useState } from "react";
 import Drawer from "../drawer/Drawer";
