@@ -1,0 +1,74 @@
+.backdrop {
+    position: fixed;
+    z-index: 98;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal {
+        position: absolute;
+        z-index: 97;
+
+        height: 360px;
+        width: 280px;
+        border-radius: 28px;
+        padding: 24px;
+        background-color: #ffffff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .content {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            p {
+                margin: 0;
+                color: black;
+            }
+        }
+
+        .actions {
+            display: flex;
+            background-color: #0E2038;
+            border-radius: 24px;
+
+            > button {
+                border: none;
+                padding: 20px 0;
+                width: 100%;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                background: transparent;
+                opacity: 0.8;
+            }
+
+            :nth-child(1) {
+                border-right: 2px solid #40E0D0;
+                border-top-left-radius: 24px;
+                border-bottom-left-radius: 24px;
+            }
+            :nth-child(2) {
+                border-left: 2px solid #40E0D0;
+                border-top-right-radius: 24px;
+                border-bottom-right-radius: 24px;
+                color: red;
+            }
+        }
+        // transition: transform 0.1s ease-in-out;
+    }
+
+    .open {
+        box-shadow: 0.5px 0 4px grey;
+        // transform: translateX(250px);
+    }
+}

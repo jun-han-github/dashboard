@@ -15,7 +15,7 @@ export const jobExperiences = [
             'I led another junior to develop the Admin portal with login functionality with Google Auth and, features like user summaries, asset management, toggling of transacted tokens, search functions and editors.',
             'Web3 experience: Research on blockchain-related tools and libraries and worked with Moralis and Covalent APIs.'
         ],
-        tags: ['Ionic', 'Angular', 'Vuejs', 'TypeScript', 'Laravel', 'Insurance', 'AIA', 'Web3', 'GAuth', 'Figma', 'SequelAce']
+        tags: ['Ionic', 'Angular', 'Vuejs', 'TypeScript', 'PHP', 'Laravel', 'Insurance', 'AIA', 'Web3', 'GAuth', 'Figma', 'SequelAce']
     },
     {
         title: 'Backend Developer, HP SINGAPORE',
@@ -35,7 +35,7 @@ export const jobExperiences = [
             'Refactoring of codes using DRY principles and Single Responsibility principles in SOLID. Some experience with Docker.',
             'Integration of third-party APIs like Shopee, Lazada and Amazon.'
         ],
-        tags: ['Laravel', 'Vuejs', 'Shopee', 'Lazada', 'Amazon', 'PostgreSQL']
+        tags: ['Vuejs', 'PHP', 'Laravel', 'Shopee', 'Lazada', 'Amazon', 'PostgreSQL']
     },
     {
         title: 'Web Developer, ACCREDIFY.IO',
@@ -44,7 +44,7 @@ export const jobExperiences = [
             'Build digital certificates using TypeScript and React, and I had the opportunity to develop a webpage using Laravel framework.',
             'Learnt about Ethereum blockchain, Etherscan, gas fees and cryptography works here.'
         ],
-        tags: ['React', 'TypeScript', 'Ethereum', 'MySQL']
+        tags: ['React', 'TypeScript', 'PHP', 'Laravel', 'Ethereum', 'MySQL']
     },
     {
         title: 'Financial Consultant, ALTITUDE ALLIANCE',
