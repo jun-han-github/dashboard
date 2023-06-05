@@ -9,8 +9,12 @@ body,
   box-sizing: border-box;
 }
 
-* {
+h2, p, a {
   color: #40e0d0;
+}
+
+h3 {
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
