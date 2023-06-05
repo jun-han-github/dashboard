@@ -56,7 +56,7 @@ const HomePage = () => {
                 <div className="me">
                     <h3>About Me</h3>
 
-                    <Modal trigger={modalActivity} handleModal={handleModalClick} data={'https://wa.me/+6591166202'} />
+                    <Modal trigger={modalActivity} handleModal={handleModalClick} data={{title: 'Hi there!', message: 'You are about to WhatsApp me!', url: 'https://wa.me/+6591166202'}} />
                     <div onClick={handleModalClick} className="whatsapp-icon">
                         <FaWhatsapp size={20} color="green" />
                     </div>
