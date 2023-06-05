@@ -24,7 +24,7 @@ const Icon = (type: string, size = 30) => {
             icon.current = (<FaCheck size={size} color={color.current} />);
             break;
         case 'failed':
-            color.current = 'red';
+            color.current = '#FF9494';
             icon.current = (<FaTimes size={size} color={color.current} />);
             break;
         case 'warning':
