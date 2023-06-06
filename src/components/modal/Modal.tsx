@@ -1,6 +1,6 @@
 import { MouseEvent, useEffect, useRef, useState, ReactNode } from 'react';
 import './Modal.scss';
-import { FaCheck, FaExclamation, FaTimes, FaWhatsapp } from 'react-icons/fa';
+import { FaCheck, FaCheckCircle, FaExclamation, FaTimes, FaWhatsapp } from 'react-icons/fa';
 
 type ModalProp = {
     trigger: boolean;
@@ -54,6 +54,27 @@ const Icon = (type: string, size = 30) => {
 
 const Modal = ({ trigger, handleModal, data }: ModalProp) => {
 
+    const messageTemplates = [
+        {
+            id: 1,
+            selected: true,
+            message: 'Hi, I am a recruiter and I have a job opportunity for you.',
+        },
+        {
+            id: 2,
+            selected: false,
+            message: 'Hi, I am a developer and I would like to connect with you.',
+        },
+        {
+            id: 3,
+            selected: false,
+            message: 'Hi, I am just looking to network casually!',
+        },
+    ];
+
+    const [initialMessage, setInitialMessage] = useState('?text=' + messageTemplates[0].message);
+    const [messages, setMessages] = useState(messageTemplates);
+
     const active = {
         display: trigger ? 'flex' : 'none'
     }
@@ -63,8 +84,21 @@ const Modal = ({ trigger, handleModal, data }: ModalProp) => {
     }
 
     const onConfirm = (data?: string) => {
-        console.log(data);
+        window.open(data, '_blank')
     }
+
+    const _addInitialMessage = (id: number, selected: boolean) => {
+
+        messages.forEach((template) => 
+            template.selected = (template.id === id) ? !selected : false);
+
+        const template = messages.find(template => template.selected && template.id === id);
+
+        if (template) setInitialMessage('?text=' + template?.message);
+        else setInitialMessage('');
+
+        setMessages(messages);
+    };
 
     return (
         <div className="backdrop" style={active} onClick={handleModal}>
@@ -73,9 +107,30 @@ const Modal = ({ trigger, handleModal, data }: ModalProp) => {
                     { Icon(data?.iconType) }
                     <h2>{data?.title}</h2>
                     <p>{data?.message}</p>
+                    {
+                        messages.map((template: {id: number, selected: boolean, message: string}) => {
+                            return (
+                                <div 
+                                    className="template-message"
+                                    style={{ 
+                                        borderColor: template.selected ? 'green' : 'lightgrey',
+                                        backgroundColor: template.selected ? '#D8F3DC' : 'white',
+                                    }}
+                                    key={template.id} 
+                                    onClick={() => _addInitialMessage(template.id, template.selected)}
+                                >
+                                    <p>{template.message}</p>
+                                    <div className="checkmark">
+                                        <FaCheckCircle color={template.selected ? 'green' : 'transparent'} />
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+
                 </div>
                 <div className="actions">
-                    <button onClick={() => onConfirm(data?.url)} className="modal-buttons">OK</button>
+                    <button onClick={() => onConfirm(data?.url + initialMessage)} className="modal-buttons">OK</button>
                     <button onClick={handleModal} className="modal-buttons">CANCEL</button>
                 </div>
             </div>

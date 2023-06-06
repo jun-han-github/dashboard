@@ -15,7 +15,7 @@
         position: absolute;
         z-index: 97;
 
-        height: 360px;
+        min-height: 360px;
         width: 280px;
         border-radius: 28px;
         padding: 24px;
@@ -23,6 +23,7 @@
 
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
 
         .content {
             height: 100%;
@@ -32,7 +33,34 @@
             align-items: center;
 
             h2, p {
+                margin: 4px;
                 color: black;
+            }
+
+            .template-message {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                text-align: left;
+                border: 2px solid;
+                border-radius: 8px;
+                margin: 8px;
+                cursor: pointer;
+
+                p {
+                    font-size: 0.75rem;
+                    margin: 10px;
+                    color: black;
+                }
+
+                .checkmark {
+                    margin: 0 8px;
+                }
+            }
+
+            .template-message:hover {
+                background-color: lightblue;
             }
         }
 
@@ -40,6 +68,7 @@
             display: flex;
             background-color: #0E2038;
             border-radius: 24px;
+            margin-top: 8px;
 
             > button {
                 border: none;
@@ -82,7 +111,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    animation: rotateBorder 0.5s linear 1;
+    animation: rotateBorder 1s linear 1;
     animation-fill-mode: forwards;
 
     &::before {
@@ -97,7 +126,9 @@
 
     @keyframes rotateBorder {
         0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        50% { transform: rotate(360deg); }
+        75% { transform: translateY(-6px); }
+        100% { transform: translateY(0px); }
     }
 
     .icon {
@@ -110,12 +141,15 @@
         justify-content: center;
         align-items: center;
         padding: 4px;
-        animation: inverseRotate 0.5s linear 1;
+        animation: inverseRotate 1s linear 1;
     }
 
     @keyframes inverseRotate {
         0% { transform: rotate(0deg); }
-        100% { transform: rotate(-360deg); }
+        50% { transform: rotate(-360deg); }
+        100% {
+            transform: scale(1);
+        }
     }
 }
 
