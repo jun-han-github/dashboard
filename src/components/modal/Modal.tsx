@@ -1,4 +1,4 @@
-import { MouseEvent, useEffect, useRef, useState, ReactNode } from 'react';
+import { MouseEvent, useRef, useState, ReactNode } from 'react';
 import './Modal.scss';
 import { FaCheck, FaCheckCircle, FaExclamation, FaTimes, FaWhatsapp } from 'react-icons/fa';
 
@@ -12,7 +12,7 @@ const Icon = (type: string, size = 30) => {
     const color = useRef('');
     const icon = useRef<ReactNode | null>(null);
 
-    const [borderColor, setBorderColor] = useState<string>('white');
+    // const [borderColor, setBorderColor] = useState<string>('white');
 
     switch(type) {
         case 'whatsapp':
@@ -43,7 +43,7 @@ const Icon = (type: string, size = 30) => {
 
     return (
         <div className="icon-border" style={{
-            background: `${color.current}`
+            background: color.current
             // backgroundImage: `conic-gradient(${color.current} 0deg, ${color.current} 36deg, ${borderColor} 36deg)`
         }}>
             <div className="icon">
