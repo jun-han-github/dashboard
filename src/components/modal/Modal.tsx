@@ -33,17 +33,18 @@ const Icon = (type: string, size = 30) => {
             break;
     }
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setBorderColor(color.current);
-        }, 500);
+    // useEffect(() => {
+    //     const timeout = setTimeout(() => {
+    //         setBorderColor(color.current);
+    //     }, 800);
     
-        return () => clearTimeout(timeout);
-    }, []);
+    //     return () => clearTimeout(timeout);
+    // }, []);
 
     return (
         <div className="icon-border" style={{
-            backgroundImage: `conic-gradient(${color.current} 0deg, ${color.current} 36deg, ${borderColor} 36deg)`
+            background: `${color.current}`
+            // backgroundImage: `conic-gradient(${color.current} 0deg, ${color.current} 36deg, ${borderColor} 36deg)`
         }}>
             <div className="icon">
                 { icon.current }
