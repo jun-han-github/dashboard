@@ -6,6 +6,7 @@ import ExperienceBox from "../components/experience-box/ExperienceBox";
 import SocialMediaBar from "../components/social-media-bar/SocialMediaBar";
 import './HomePage.scss';
 import Modal from "../components/modal/Modal";
+import { getWebsiteUrl } from '../util/helper';
 
 const HomePage = () => {
 
@@ -15,16 +16,15 @@ const HomePage = () => {
         setModalActivity(!modalActivity);
     }
 
-    const skill = (skillName: string, url: string) => {
-        return (<a href={url} target="_blank" className="skill-highlight"><strong>{skillName}</strong></a>);
+    const skill = (skillName: string) => {
+        return (<a href={getWebsiteUrl(skillName)} target="_blank" className="skill-highlight"><strong>{skillName}</strong></a>);
     }
 
-    const react = skill("React", "https://react.dev/");
-    const vuejs = skill("Vuejs", "https://vuejs.org/");
-    const angular = skill("Angular", "https://angular.io/");
-    const laravel = skill("Laravel", "https://laravel.com/");
-    const ionic = skill("Ionic", "https://ionicframework.com/");
-    // const reactNative = skill("React Native", "https://reactnative.dev/");
+    const react = skill("React");
+    const vuejs = skill("Vuejs");
+    const angular = skill("Angular");
+    const laravel = skill("Laravel");
+    const ionic = skill("Ionic");
 
     const nameStyle = {
         h2: { minWidth: '216px' },

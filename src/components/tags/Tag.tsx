@@ -1,3 +1,5 @@
+import { getWebsiteUrl } from "../../util/helper"
+
 const tagStyle = {
   display: 'inline-block',
   backgroundColor: '#FF7B19',
@@ -15,9 +17,11 @@ type TagProps = {
 
 const Tag = ({tag}: TagProps) => {
   return (
-    <div style={tagStyle}>
-      <strong style={{color: '#000000'}}>{tag}</strong>
-    </div>
+    <a href={getWebsiteUrl(tag)} style={{ pointerEvents: getWebsiteUrl(tag) === '#' ? 'none' : 'auto' }} target="_blank">
+      <div style={tagStyle}>
+        <strong style={{color: '#000000'}}>{tag}</strong>
+      </div>
+    </a>
   )
 }
 export default Tag
