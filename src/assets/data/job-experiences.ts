@@ -10,7 +10,8 @@ export const jobExperiences = [
         title: 'Full Stack Developer, AIKEN DIGITAL',
         url: 'https://www.aikendigital.com/about',
         description: [
-            'Migration and develop features for existing CRM mobile app (AIA) using Ionic, Angular, Vue.js and Laravel, subsequently a new project launch for a crypto-wallet app (Haven wallet) with the same tech-stack.',
+            'Migrate and develop features for existing CRM mobile app (AIA) using Ionic, Angular, Vue.js and Laravel.',
+            'Subsequently a new project launch for a crypto-wallet app (Haven wallet) with the same tech-stack.',
             'My role was to develop frontend pages. Mobile-first design referenced from Figma.',
             'I led another junior to develop the Admin portal with login functionality with Google Auth and, features like user summaries, asset management, toggling of transacted tokens, search functions and editors.',
             'Web3 experience: Research on blockchain-related tools and libraries and worked with Moralis and Covalent APIs.'
@@ -31,7 +32,7 @@ export const jobExperiences = [
         title: 'Fullstack Developer, HACHI TECH',
         url: 'https://www.hachi.tech/about-challenger',
         description: [
-            'Develop components using Vue.js frontend and Laravel as backend API.',
+            'Develop a product promotion template generator using Vue.js frontend and Laravel as backend API.',
             'Refactoring of codes using DRY principles and Single Responsibility principles in SOLID. Some experience with Docker.',
             'Integration of third-party APIs like Shopee, Lazada and Amazon.'
         ],
@@ -41,7 +42,7 @@ export const jobExperiences = [
         title: 'Web Developer, ACCREDIFY.IO',
         url: 'https://accredify.io/',
         description: [
-            'Build digital certificates using TypeScript and React, and I had the opportunity to develop a webpage using Laravel framework.',
+            'Build digital certificates of Singapore\'s educational institutions and universities using TypeScript and React, and I had the opportunity to develop a webpage using Laravel framework.',
             'Learnt about Ethereum blockchain, Etherscan, gas fees and cryptography works here.'
         ],
         tags: ['React', 'TypeScript', 'PHP', 'Laravel', 'Ethereum', 'MySQL']

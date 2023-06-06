@@ -29,20 +29,34 @@ a {
 		justify-content: center;
 		align-items: center;
 		cursor: pointer;
-		width: 100px;
-		height: 100px;
+		width: 60px;
 		margin-left: auto;
 
 		border-radius: 12px;
 		border: 2px solid #40e0d0;
 		color: #40e0d0;
 		background-color: #000000;
+		animation: jumpingAnimation 1s ease-in-out infinite;
 
 		.text {
-			margin-top: 16px;
+			margin: 8px 0;
 			font-size: 0.75rem;
 			font-weight: 700;
 		}
+
+		
+		@keyframes jumpingAnimation {
+			0% { transform: translateY(-8px); }
+			100% { transform: translateY(1px); }
+		}
+	}
+
+	.purple-border {
+		position: absolute;
+		height: 36px;
+		width: 57px;
+		border: 2px solid #B660CD;
+		border-radius: 12px;
 	}
 
 	button.download-resume:hover {

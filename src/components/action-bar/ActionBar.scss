@@ -1,0 +1,30 @@
+.action-bar {
+    position: sticky;
+    top: 24%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    width: 50px;
+    margin: 0 8px;
+
+    .candybar {
+        border: 2px solid grey;
+        border-radius: 28px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px;
+        background-color: lightgrey;
+
+        .bar-icons {
+            margin: 8px 0;
+            border-radius: 50%;
+            border: 2px solid grey;
+            padding: 3px;
+            background-color: white;
+        }
+    }
+}

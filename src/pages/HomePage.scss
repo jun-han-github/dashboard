@@ -1,56 +1,64 @@
-.home-container {
-    h2 {
-        margin: 0;
-    }
+.home {
 
-    p {
-        margin: 0;
-    }
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding-bottom: 16px;
-}
-
-.about {
-    font-size: 14px;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    padding: 16px 0;
-
-    .me {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        h3 {
+    .header {
+        h2 {
             margin: 0;
         }
+    
+        p {
+            margin: 0;
+        }
+    
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 16px;
 
-        .about-whatsapp-icon {
+        .links {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
+        }
+    }
+    
+    .about {
+        font-size: 14px;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        padding: 16px 0;
+    
+        .me {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 2px solid white;
+    
+            h3 {
+                margin: 0;
+            }
+    
+            .about-whatsapp-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                border: 2px solid white;
+            }
+    
+            .whatsapp-icon:hover {
+                animation: whatsappIcon 1s ease-in-out infinite;
+            }
         }
-
-        .whatsapp-icon:hover {
-            animation: whatsappIcon 1s ease-in-out infinite;
+    
+        @keyframes whatsappIcon {
+            50% { transform: scale(1.3); }
         }
-    }
-
-    @keyframes whatsappIcon {
-        50% { transform: scale(1.3); }
-    }
-
-    .skill-highlight {
-        & :hover {
-            color: orange
+    
+        .skill-highlight {
+            & :hover {
+                color: orange
+            }
         }
     }
 }

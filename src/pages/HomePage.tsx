@@ -34,8 +34,8 @@ const HomePage = () => {
     console.log(navigator.userAgent);
 
     return (
-        <div>
-            <div className="home-container">
+        <div className="home">
+            <div className="header">
                 <div className="intro">
                     <h2 style={nameStyle.h2}>
                         <span style={nameStyle.span}>{" <"}</span>

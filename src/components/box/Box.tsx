@@ -1,5 +1,4 @@
 import './Box.scss';
-import { FaFilePdf } from 'react-icons/fa';
 
 const Box = () => {
 
@@ -7,9 +6,11 @@ const Box = () => {
 
 	return (
 		<a href={resumePathUrl} download="LiuJunHan_CV_LS.PDF">
+			<div className="purple-border">
+
+			</div>
 			<button className="download-card resume">
-				<FaFilePdf style={{ color: '#40e0d0' }} size={24} />
-				<span className="text">Download<br/>Resume</span>
+				<span className="text">Resume</span>
 			</button>
 		</a>
 	)
