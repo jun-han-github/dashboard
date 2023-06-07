@@ -1,16 +1,19 @@
 export const getWebsiteUrl = (term: string): string => {
     switch(term) {
-        case 'AWS':
-            return 'https://aws.amazon.com/';
-
-        case 'AWS Amplify':
-            return 'https://aws.amazon.com/amplify/';
-
         case 'AIA':
             return 'https://www.aia.com.sg/en/index';
-
+            
         case 'Angular':
             return 'https://angular.io/';
+            
+        case 'AWS':
+            return 'https://aws.amazon.com/';
+        
+        case 'AWS Amplify':
+            return 'https://aws.amazon.com/amplify/';
+                        
+        case 'AXA':
+            return 'https://www.axa.com/';
 
         case 'Docker':
             return 'https://www.docker.com/';
@@ -20,6 +23,12 @@ export const getWebsiteUrl = (term: string): string => {
 
         case 'Figma':
             return 'https://www.figma.com/';
+
+        case 'GAuth':
+            return 'https://safety.google/authentication/';
+
+        case 'Great Eastern':
+            return 'https://www.greateasternlife.com/sg/en/personal-insurance.html';
 
         case 'Ionic':
             return 'https://ionicframework.com/';

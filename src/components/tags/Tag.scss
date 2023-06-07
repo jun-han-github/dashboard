@@ -1,0 +1,40 @@
+.tag {
+    background-color: #FF7B19;
+    border-radius: 20px;
+    padding: 4px 8px;
+
+    font-size: 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.glow {
+    animation: glowing 3s linear infinite;
+}
+  
+@keyframes glowing {
+    0% {
+        box-shadow: 0px 0px 3px yellow;
+    }
+
+    20% {
+        box-shadow: 0px 0px 6px yellow;
+    }
+
+    40% {
+        box-shadow: 0px 0px 9px yellow;
+    }
+
+    60% {
+        box-shadow: 0px 0px 9px yellow;
+    }
+
+    80% {
+        box-shadow: 0px 0px 6px yellow;
+    }
+
+    100% {
+        box-shadow: 0px 0px 3px yellow;
+    }
+}
