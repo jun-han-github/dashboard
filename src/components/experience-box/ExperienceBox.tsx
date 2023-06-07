@@ -14,7 +14,7 @@ const ExperienceBox = ({ title, url, description, tags }: JobExperience) => {
 
   return (
     <div style={experienceStyle}>
-      <a href={url}>
+      <a href={url} style={{ pointerEvents: url === '' ? 'none' : 'auto' }}>
         <strong>{title}&nbsp;&nbsp;{ url && <FaLink size={12}/>}</strong>
       </a>
       { description.map((content, index) => (<p key={index} style={{ fontSize: '12px' }}>{content}<br/></p>)) }
