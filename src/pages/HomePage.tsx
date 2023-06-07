@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
-import { jobExperiences as data } from "../assets/data/job-experiences";
 import Box from "../components/box/Box";
 import ExperienceBox from "../components/experience-box/ExperienceBox";
 import SocialMediaBar from "../components/social-media-bar/SocialMediaBar";
 import './HomePage.scss';
 import Modal from "../components/modal/Modal";
 import { getWebsiteUrl } from '../util/helper';
+import { jobExperiences } from "../assets/data/job-experiences";
+import { personalProjects } from '../assets/data/personal-projects';
 
 const HomePage = () => {
 
@@ -70,10 +71,11 @@ const HomePage = () => {
                 <p>Before I became a software developer, I was a financial consultant, more details are provided in my resume.</p>
             </div>
 
-            <div className="experience">
-                <h3>Experiences</h3>
-                { data.map((experience, index) => (<ExperienceBox key={index} {...experience} />)) }
-            </div>
+            <h3>Experiences</h3>
+            { jobExperiences.map((experience, index) => (<ExperienceBox key={index} {...experience} />)) }
+            
+            <h3>Personal Projects</h3>
+            { personalProjects.map((projects, index) => (<ExperienceBox key={index} {...projects} />)) }
         </div>
     )
 }

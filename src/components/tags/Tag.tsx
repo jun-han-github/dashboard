@@ -17,7 +17,7 @@ type TagProps = {
 
 const Tag = ({tag}: TagProps) => {
   return (
-    <a href={getWebsiteUrl(tag)} style={{ pointerEvents: getWebsiteUrl(tag) === '#' ? 'none' : 'auto' }} target="_blank">
+    <a href={getWebsiteUrl(tag)} style={{ pointerEvents: getWebsiteUrl(tag) === '' ? 'none' : 'auto' }} target="_blank">
       <div style={tagStyle}>
         <strong style={{color: '#000000'}}>{tag}</strong>
       </div>

@@ -1,10 +1,19 @@
 export const getWebsiteUrl = (term: string): string => {
     switch(term) {
+        case 'AWS':
+            return 'https://aws.amazon.com/';
+
+        case 'AWS Amplify':
+            return 'https://aws.amazon.com/amplify/';
+
         case 'AIA':
             return 'https://www.aia.com.sg/en/index';
 
         case 'Angular':
             return 'https://angular.io/';
+
+        case 'Docker':
+            return 'https://www.docker.com/';
         
         case 'Ethereum':
             return 'https://ethereum.org/en/';
@@ -29,6 +38,12 @@ export const getWebsiteUrl = (term: string): string => {
 
         case 'React Native':
             return 'https://reactnative.dev/';
+        
+        case 'React Navigation':
+            return 'https://reactnavigation.org/docs/getting-started/';
+
+        case 'Redis':
+            return 'https://redis.io/docs/about/';
 
         case 'TypeScript':
             return 'https://www.typescriptlang.org/docs/';
@@ -37,6 +52,6 @@ export const getWebsiteUrl = (term: string): string => {
             return 'https://vuejs.org/';
         
         default:
-            return '#';
+            return '';
     }
 }
