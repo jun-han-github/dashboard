@@ -9,6 +9,7 @@ body,
 
 h2, p, a {
   color: #40e0d0;
+  text-decoration: none;
 }
 
 h3 {
