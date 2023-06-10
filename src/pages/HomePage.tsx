@@ -14,12 +14,12 @@ const HomePage = () => {
     const [modalWhatsapp, setModalWhatsapp] = useState(false);
     const [modalPDF, setModalPDF] = useState(false);
 
-    const handleModalWhatsappClick = () => {
-        setModalWhatsapp(!modalWhatsapp);
-    }
-
-    const handleModalPDFClick = () => {
-        setModalPDF(!modalPDF);
+    const handleModalClick = (type: string): void => {
+        if (type === 'whatsapp') {
+            setModalWhatsapp(!modalWhatsapp);
+        } else {
+            setModalPDF(!modalPDF);
+        }
     }
 
     const skill = (skillName: string) => {
@@ -52,12 +52,12 @@ const HomePage = () => {
                     <SocialMediaBar />
                 </div>
                 <div className="links">
-                    <ResumeButton onClick={handleModalPDFClick} />
+                    <ResumeButton onClick={() => handleModalClick('pdf')} />
                     {
                         modalPDF &&
                         <Modal
                             trigger={modalPDF}
-                            handleModal={handleModalPDFClick}
+                            handleModal={() => handleModalClick('pdf')}
                             data={{
                                 iconType: 'pdf',
                                 title: 'Hi there!',
@@ -75,7 +75,7 @@ const HomePage = () => {
                         modalWhatsapp &&
                         <Modal
                             trigger={modalWhatsapp}
-                            handleModal={handleModalWhatsappClick}
+                            handleModal={() => handleModalClick('whatsapp')}
                             data={{
                                 iconType: 'whatsapp',
                                 title: 'Hi there!',
@@ -83,7 +83,7 @@ const HomePage = () => {
                                 url: 'https://wa.me/+6591166202?text='
                             }} />
                     }
-                    <div onClick={handleModalWhatsappClick} className="about-whatsapp-icon">
+                    <div onClick={() => handleModalClick('whatsapp')} className="about-whatsapp-icon">
                         <FaWhatsapp size={20} color="#40e0d0" />
                     </div>
 
