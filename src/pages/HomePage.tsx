@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
-import Box from "../components/box/Box";
 import ExperienceBox from "../components/experience-box/ExperienceBox";
 import SocialMediaBar from "../components/social-media-bar/SocialMediaBar";
 import './HomePage.scss';
@@ -8,13 +7,19 @@ import Modal from "../components/modal/Modal";
 import { getWebsiteUrl } from '../util/helper';
 import { jobExperiences } from "../assets/data/job-experiences";
 import { personalProjects } from '../assets/data/personal-projects';
+import ResumeButton from '../components/buttons/resume-button/ResumeButton';
 
 const HomePage = () => {
 
-    const [modalActivity, setModalActivity] = useState(false);
+    const [modalWhatsapp, setModalWhatsapp] = useState(false);
+    const [modalPDF, setModalPDF] = useState(false);
 
-    const handleModalClick = () => {
-        setModalActivity(!modalActivity);
+    const handleModalWhatsappClick = () => {
+        setModalWhatsapp(!modalWhatsapp);
+    }
+
+    const handleModalPDFClick = () => {
+        setModalPDF(!modalPDF);
     }
 
     const skill = (skillName: string) => {
@@ -32,8 +37,6 @@ const HomePage = () => {
         span: { color: '#ffffff', fontSize: '20px' }
     }
 
-    console.log(navigator.userAgent);
-
     return (
         <div className="home">
             <div className="header">
@@ -49,18 +52,38 @@ const HomePage = () => {
                     <SocialMediaBar />
                 </div>
                 <div className="links">
-                    <Box />
+                    <ResumeButton onClick={handleModalPDFClick} />
+                    {
+                        modalPDF &&
+                        <Modal
+                            trigger={modalPDF}
+                            handleModal={handleModalPDFClick}
+                            data={{
+                                iconType: 'pdf',
+                                title: 'Hi there!',
+                                message: 'You are about to download my resume!',
+                                url: './assets/data/LiuJunHan_CV_LS.pdf'
+                            }} />
+                    }
                 </div>
             </div>
 
             <div className="about">
                 <div className="me">
                     <h3>About Me</h3>
-                    { 
-                        modalActivity &&
-                        <Modal trigger={modalActivity} handleModal={handleModalClick} data={{iconType: 'whatsapp', title: 'Hi there!', message: 'You are about to WhatsApp me!', url: 'https://wa.me/+6591166202'}} />
+                    {
+                        modalWhatsapp &&
+                        <Modal
+                            trigger={modalWhatsapp}
+                            handleModal={handleModalWhatsappClick}
+                            data={{
+                                iconType: 'whatsapp',
+                                title: 'Hi there!',
+                                message: 'You are about to WhatsApp me!',
+                                url: 'https://wa.me/+6591166202?text='
+                            }} />
                     }
-                    <div onClick={handleModalClick} className="about-whatsapp-icon">
+                    <div onClick={handleModalWhatsappClick} className="about-whatsapp-icon">
                         <FaWhatsapp size={20} color="#40e0d0" />
                     </div>
 
@@ -73,7 +96,7 @@ const HomePage = () => {
 
             <h3>Experiences</h3>
             { jobExperiences.map((experience, index) => (<ExperienceBox key={index} {...experience} />)) }
-            
+
             <h3>Personal Projects</h3>
             { personalProjects.map((projects, index) => (<ExperienceBox key={index} {...projects} />)) }
         </div>
