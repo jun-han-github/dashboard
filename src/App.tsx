@@ -1,7 +1,7 @@
-import './App.scss'
 import { Route, Routes } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
+import SurveyPage from './pages/SurveyPage'
 
 function App() {
 
@@ -9,6 +9,7 @@ function App() {
 		<Routes>
 			<Route element={<Layout />}>
 				<Route path="/" element={<HomePage />} />
+				<Route path="/survey" element={<SurveyPage />} />
 			</Route>
 		</Routes>
 	)
