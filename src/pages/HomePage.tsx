@@ -92,6 +92,7 @@ const HomePage = () => {
                     <p>In 2021, I used {vuejs} and {laravel} to create templates for e-Commerce platforms.</p>
                     <br />
                     <p>In 2022, I was exposed to blockchain technologies once again and had the chance to work with crypto-related APIs while developing a mobile app from scratch using {ionic}, {angular} and {laravel}.</p>
+                    <br />
                     <p>Before I became a software developer, I was a financial consultant, more details are provided in my resume.</p>
                 </div>
             </div>

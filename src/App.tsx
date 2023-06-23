@@ -11,9 +11,9 @@ function App() {
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path="/" element={<HomePage />} />
-					<Route path="/survey" element={<SurveyPage />} />
 					<Route path="/*" element={<ErrorPage />} />
 				</Route>
+				<Route path="/survey" element={<SurveyPage />} />
 			</Routes>
 		</Router>
 	)
