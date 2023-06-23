@@ -66,39 +66,43 @@ const HomePage = () => {
                             }} />
                     }
                 </div>
-            </div>
 
-            <div className="about">
-                <div className="me">
-                    <h3>About Me</h3>
-                    {
-                        modalWhatsapp &&
-                        <Modal
-                            trigger={modalWhatsapp}
-                            handleModal={() => handleModalClick('whatsapp')}
-                            data={{
-                                iconType: 'whatsapp',
-                                title: 'Hi there!',
-                                message: 'You are about to WhatsApp me!',
-                                url: 'https://wa.me/+6591166202?text='
-                            }} />
-                    }
-                    <div onClick={() => handleModalClick('whatsapp')} className="about-whatsapp-icon">
-                        <FaWhatsapp size={20} color="#40e0d0" />
+                <div className="about">
+                    <div className="me">
+                        <h3>About Me</h3>
+                        {
+                            modalWhatsapp &&
+                            <Modal
+                                trigger={modalWhatsapp}
+                                handleModal={() => handleModalClick('whatsapp')}
+                                data={{
+                                    iconType: 'whatsapp',
+                                    title: 'Hi there!',
+                                    message: 'You are about to WhatsApp me!',
+                                    url: 'https://wa.me/+6591166202?text='
+                                }} />
+                        }
+                        <div onClick={() => handleModalClick('whatsapp')} className="about-whatsapp-icon">
+                            <FaWhatsapp size={20} color="#40e0d0" />
+                        </div>
                     </div>
-
+                    
+                    <p>In mid-2020, I started my software journey with HTML, CSS, Javascript. I then work with Typescript and {react} while creating value in a blockchain-based startup that drives the adoption of digital credentials.</p>
+                    <br />
+                    <p>In 2021, I used {vuejs} and {laravel} to create templates for e-Commerce platforms.</p>
+                    <br />
+                    <p>In 2022, I was exposed to blockchain technologies once again and had the chance to work with crypto-related APIs while developing a mobile app from scratch using {ionic}, {angular} and {laravel}.</p>
+                    <p>Before I became a software developer, I was a financial consultant, more details are provided in my resume.</p>
                 </div>
-                <p>In mid-2020, I started my software journey with HTML, CSS, Javascript. I then work with Typescript and {react} while creating value in a blockchain-based startup that drives the adoption of digital credentials.</p>
-                <p>In 2021, I used {vuejs} and {laravel} to create templates for e-Commerce platforms.</p>
-                <p>In 2022, I was exposed to blockchain technologies once again and had the chance to work with crypto-related APIs while developing a mobile app from scratch using {ionic}, {angular} and {laravel}.</p>
-                <p>Before I became a software developer, I was a financial consultant, more details are provided in my resume.</p>
             </div>
 
-            <h3>Experiences</h3>
-            { jobExperiences.map((experience, index) => (<ExperienceBox key={index} {...experience} />)) }
+            <div className="history">
+                <h3>Experiences</h3>
+                { jobExperiences.map((experience, index) => (<ExperienceBox key={index} {...experience} />)) }
 
-            <h3>Personal Projects</h3>
-            { personalProjects.map((projects, index) => (<ExperienceBox key={index} {...projects} />)) }
+                <h3>Personal Projects</h3>
+                { personalProjects.map((projects, index) => (<ExperienceBox key={index} {...projects} />)) }
+            </div>
         </div>
     )
 }

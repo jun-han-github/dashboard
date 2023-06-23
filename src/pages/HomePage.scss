@@ -1,4 +1,6 @@
 .home {
+    flex: 1;
+    flex-direction: column;
 
     .header {
         h2 {
@@ -9,57 +11,75 @@
             margin: 0;
         }
 
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        width: 100%;
+        flex: 1;
+        flex-direction: column;
         padding-bottom: 16px;
 
         .links {
             display: flex;
             justify-content: flex-end;
+            padding-bottom: 12px;
+        }
+
+        .about {
+            font-size: 14px;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding: 16px 0;
+    
+            .me {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 16px;
+    
+                h3 {
+                    margin: 0;
+                }
+    
+                .about-whatsapp-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    cursor: pointer;
+
+                    & :hover {
+                        animation: whatsappIcon 1s ease-in-out infinite;
+                    }
+                }
+            }
+    
+            @keyframes whatsappIcon {
+                50% { transform: scale(1.3); }
+            }
+    
+            .skill-highlight:hover {
+                color: orange
+            }
         }
     }
 
-    .about {
-        font-size: 14px;
-        border-top: 1px solid #ffffff;
-        border-bottom: 1px solid #ffffff;
-        padding: 16px 0;
+    .history {
+        flex: 1;
+    }
 
-        .me {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+}
 
-            h3 {
-                margin: 0;
-            }
+@media only screen and (min-width: 1000px) {
+    .home {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
 
-            .about-whatsapp-icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 38px;
-                height: 38px;
-                border-radius: 50%;
-                border: 2px solid white;
-                cursor: pointer;
-            }
-
-            .whatsapp-icon:hover {
-                animation: whatsappIcon 1s ease-in-out infinite;
-            }
-        }
-
-        @keyframes whatsappIcon {
-            50% { transform: scale(1.3); }
-        }
-
-        .skill-highlight {
-            & :hover {
-                color: orange
-            }
+        .header,
+        .history {
+            margin: 0 24px;
+            max-width: 660px;
         }
     }
 }
