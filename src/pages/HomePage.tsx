@@ -31,6 +31,9 @@ const HomePage = () => {
     const angular = skill("Angular");
     const laravel = skill("Laravel");
     const ionic = skill("Ionic");
+    const reactNative = skill("React Native");
+    const nodeJs = skill("Nodejs");
+    const aws = skill("AWS");
 
     const nameStyle = {
         h2: { minWidth: '216px' },
@@ -86,12 +89,14 @@ const HomePage = () => {
                             <FaWhatsapp size={20} color="#40e0d0" />
                         </div>
                     </div>
-                    
+
                     <p>In mid-2020, I started my software journey with HTML, CSS, Javascript. I then work with Typescript and {react} while creating value in a blockchain-based startup that drives the adoption of digital credentials.</p>
                     <br />
                     <p>In 2021, I used {vuejs} and {laravel} to create templates for e-Commerce platforms.</p>
                     <br />
-                    <p>In 2022, I was exposed to blockchain technologies once again and had the chance to work with crypto-related APIs while developing a mobile app from scratch using {ionic}, {angular} and {laravel}.</p>
+                    <p>In 2022, I was exposed to blockchain technologies once again and had the chance to work with crypto-related APIs while developing a mobile app from scratch using {ionic}, {angular}, {nodeJs} and {laravel}.</p>
+                    <br />
+                    <p>In 2023, I am furthering my frontend development skills by building a mobile app using {reactNative} with a {nodeJs} backend. Also extensively getting my hands-on experience with the {aws} Cloud.</p>
                     <br />
                     <p>Before I became a software developer, I was a financial consultant, more details are provided in my resume.</p>
                 </div>
