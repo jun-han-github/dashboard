@@ -11,12 +11,12 @@ export const jobExperiences = [
         url: 'https://www.aikendigital.com/about',
         description: [
             'Migrate and develop features for existing CRM mobile app (AIA) using Ionic, Angular, Vue.js and Laravel.',
-            'Subsequently a new project launch for a crypto-wallet app (Haven wallet) with the same tech-stack.',
+            'Subsequently a new project launch for a crypto-wallet app (Haven wallet) with the same tech-stack with an addition of Nodejs for a proxy AWS EC2 server.',
             'My role was to develop frontend pages. Mobile-first design referenced from Figma.',
             'I led another junior to develop the Admin portal with login functionality with Google Auth and, features like user summaries, asset management, toggling of transacted tokens, search functions and editors.',
             'Web3 experience: Research on blockchain-related tools and libraries and worked with Moralis and Covalent APIs.'
         ],
-        tags: ['Ionic', 'Angular', 'Vuejs', 'TypeScript', 'PHP', 'Laravel', 'Insurance', 'AIA', 'Web3', 'GAuth', 'Figma', 'SequelAce']
+        tags: ['Ionic', 'Angular', 'Vuejs', 'TypeScript', 'Nodejs', 'PHP', 'Laravel', 'Insurance', 'AIA', 'Web3', 'GAuth', 'Figma', 'SequelAce']
     },
     {
         title: 'Backend Developer, HP SINGAPORE',

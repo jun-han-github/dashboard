@@ -13,8 +13,6 @@ const Icon = (type: string, size = 30) => {
     const color = useRef('');
     const icon = useRef<ReactNode | null>(null);
 
-    // const [borderColor, setBorderColor] = useState<string>('white');
-
     switch(type) {
         case 'failed':
             color.current = '#FF9494';
@@ -38,19 +36,8 @@ const Icon = (type: string, size = 30) => {
             break;
     }
 
-    // useEffect(() => {
-    //     const timeout = setTimeout(() => {
-    //         setBorderColor(color.current);
-    //     }, 800);
-
-    //     return () => clearTimeout(timeout);
-    // }, []);
-
     return (
-        <div className="icon-border" style={{
-            background: color.current
-            // backgroundImage: `conic-gradient(${color.current} 0deg, ${color.current} 36deg, ${borderColor} 36deg)`
-        }}>
+        <div className="icon-border" style={{ background: color.current }}>
             <div className="icon">
                 { icon.current }
             </div>
@@ -76,6 +63,7 @@ const Modal = ({ trigger, handleModal, data }: ModalProp) => {
     }
 
     const _onConfirm = (url: string) => {
+        // its either pdf or whatsapp for now - 29 June 2023
         if (data.iconType === 'pdf') {
             const link = document.createElement('a');
             link.href = "./assets/data/LiuJunHan_CV_LS.pdf";
@@ -84,6 +72,8 @@ const Modal = ({ trigger, handleModal, data }: ModalProp) => {
         } else {
             window.open(url, '_blank')
         }
+
+        handleModal();
     }
 
     return (
