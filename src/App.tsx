@@ -3,6 +3,7 @@ import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
 import SurveyPage from './pages/SurveyPage'
 import ErrorPage from './pages/ErrorPage'
+import ThreeDimensionPage from './pages/ThreeDimensionPage'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
 					<Route path="/*" element={<ErrorPage />} />
 				</Route>
 				<Route path="/survey" element={<SurveyPage />} />
+				<Route path="/3d" element={<ThreeDimensionPage />} />
 			</Routes>
 		</Router>
 	)
