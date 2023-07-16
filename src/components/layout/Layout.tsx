@@ -6,7 +6,6 @@ const Layout = () => {
 	return (
 		<div className="base-layout">
 			<Outlet />
-			{/* <ActionBar /> */}
 		</div>
 	)
 }

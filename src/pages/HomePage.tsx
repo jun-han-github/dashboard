@@ -8,6 +8,7 @@ import { getWebsiteUrl } from '../util/helper';
 import { jobExperiences } from "../assets/data/job-experiences";
 import { personalProjects } from '../assets/data/personal-projects';
 import ResumeButton from '../components/buttons/resume-button/ResumeButton';
+import ActionBar from '../components/action-bar/ActionBar';
 
 const HomePage = () => {
 
@@ -42,72 +43,75 @@ const HomePage = () => {
 
     return (
         <div className="home">
-            <div className="header">
-                <div className="intro">
-                    <h2 style={nameStyle.h2}>
-                        <span style={nameStyle.span}>{" <"}</span>
-                        LiuJunHan
-                        <span style={nameStyle.span}>{" />"}</span>
-                    </h2>
-                    <p>
-                        A Frontend Developer - with backend knowledge.<br/>
-                    </p>
-                    <SocialMediaBar />
-                </div>
-                <div className="links">
-                    <ResumeButton onClick={() => handleModalClick('pdf')} />
-                    {
-                        modalPDF &&
-                        <Modal
-                            trigger={modalPDF}
-                            handleModal={() => handleModalClick('pdf')}
-                            data={{
-                                iconType: 'pdf',
-                                title: 'Hi there!',
-                                message: 'You are about to download my resume!',
-                                url: './assets/data/LiuJunHan_CV_LS.pdf'
-                            }} />
-                    }
-                </div>
-
-                <div className="about">
-                    <div className="me">
-                        <h3>About Me</h3>
+            <div className="home-content">
+                <div className="header">
+                    <div className="intro">
+                        <h2 style={nameStyle.h2}>
+                            <span style={nameStyle.span}>{" <"}</span>
+                            LiuJunHan
+                            <span style={nameStyle.span}>{" />"}</span>
+                        </h2>
+                        <p>
+                            A Frontend Developer - with backend knowledge.<br/>
+                        </p>
+                        <SocialMediaBar />
+                    </div>
+                    <div className="links">
+                        <ResumeButton onClick={() => handleModalClick('pdf')} />
                         {
-                            modalWhatsapp &&
+                            modalPDF &&
                             <Modal
-                                trigger={modalWhatsapp}
-                                handleModal={() => handleModalClick('whatsapp')}
+                                trigger={modalPDF}
+                                handleModal={() => handleModalClick('pdf')}
                                 data={{
-                                    iconType: 'whatsapp',
+                                    iconType: 'pdf',
                                     title: 'Hi there!',
-                                    message: 'You are about to WhatsApp me!',
-                                    url: 'https://wa.me/+6591166202?text='
+                                    message: 'You are about to download my resume!',
+                                    url: './assets/data/LiuJunHan_CV_LS.pdf'
                                 }} />
                         }
-                        <div onClick={() => handleModalClick('whatsapp')} className="about-whatsapp-icon">
-                            <FaWhatsapp size={20} color="#40e0d0" />
-                        </div>
                     </div>
 
-                    <p>In mid-2020, I started my software journey with HTML, CSS, Javascript. I then work with Typescript and {react} while creating value in a blockchain-based startup that drives the adoption of digital credentials.</p>
-                    <br />
-                    <p>In 2021, I used {vuejs} and {laravel} to create templates for e-Commerce platforms.</p>
-                    <br />
-                    <p>In 2022, I was exposed to blockchain technologies once again and had the chance to work with crypto-related APIs while developing a mobile app from scratch using {ionic}, {angular}, {nodeJs} and {laravel}.</p>
-                    <br />
-                    <p>In 2023, I am furthering my frontend development skills by building a mobile app using {reactNative} with a {nodeJs} backend. Also extensively getting my hands-on experience with the {aws} Cloud.</p>
-                    <br />
-                    <p>Before I became a software developer, I was a financial consultant, more details are provided in my resume.</p>
+                    <div className="about">
+                        <div className="me">
+                            <h3>About Me</h3>
+                            {
+                                modalWhatsapp &&
+                                <Modal
+                                    trigger={modalWhatsapp}
+                                    handleModal={() => handleModalClick('whatsapp')}
+                                    data={{
+                                        iconType: 'whatsapp',
+                                        title: 'Hi there!',
+                                        message: 'You are about to WhatsApp me!',
+                                        url: 'https://wa.me/+6591166202?text='
+                                    }} />
+                            }
+                            <div onClick={() => handleModalClick('whatsapp')} className="about-whatsapp-icon">
+                                <FaWhatsapp size={20} color="#40e0d0" />
+                            </div>
+                        </div>
+
+                        <p>In mid-2020, I started my software journey with HTML, CSS, Javascript. I then work with Typescript and {react} while creating value in a blockchain-based startup that drives the adoption of digital credentials.</p>
+                        <br />
+                        <p>In 2021, I used {vuejs} and {laravel} to create templates for e-Commerce platforms.</p>
+                        <br />
+                        <p>In 2022, I was exposed to blockchain technologies once again and had the chance to work with crypto-related APIs while developing a mobile app from scratch using {ionic}, {angular}, {nodeJs} and {laravel}.</p>
+                        <br />
+                        <p>In 2023, I am furthering my frontend development skills by building a mobile app using {reactNative} with a {nodeJs} backend. Also extensively getting my hands-on experience with the {aws} Cloud.</p>
+                        <br />
+                        <p>Before I became a software developer, I was a financial consultant, more details are provided in my resume.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div className="history">
-                <h3>Experiences</h3>
-                { jobExperiences.map((experience, index) => (<ExperienceBox key={index} {...experience} />)) }
+                <div className="history">
+                    <ActionBar />
+                    <h3>Experiences</h3>
+                    { jobExperiences.map((experience, index) => (<ExperienceBox key={index} {...experience} />)) }
 
-                <h3>Personal Projects</h3>
-                { personalProjects.map((projects, index) => (<ExperienceBox key={index} {...projects} />)) }
+                    <h3>Personal Projects</h3>
+                    { personalProjects.map((projects, index) => (<ExperienceBox key={index} {...projects} />)) }
+                </div>
             </div>
         </div>
     )
