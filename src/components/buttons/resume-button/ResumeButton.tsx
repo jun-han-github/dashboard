@@ -11,7 +11,7 @@ const ResumeButton = ({ onClick }: ResumeButtonProp) => {
 
 			</div>
 			<button className="download-card resume">
-				<span className="text">Resume</span>
+				<span className="text">Résumé</span>
 			</button>
 		</div>
 	)
