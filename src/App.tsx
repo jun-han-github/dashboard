@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import SurveyPage from './pages/SurveyPage'
 import ErrorPage from './pages/ErrorPage'
 import ThreeDimensionPage from './pages/ThreeDimensionPage'
+import TechnicalBlog from './pages/TechnicalBlog'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
 				</Route>
 				<Route path="/survey" element={<SurveyPage />} />
 				<Route path="/3d" element={<ThreeDimensionPage />} />
+				<Route path="/technical-blog" element={<TechnicalBlog />} />
 			</Routes>
 		</Router>
 	)
